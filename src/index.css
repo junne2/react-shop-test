@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(177, 177, 177, 0.821);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+label {
+  color: brown;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.product,.option {
+  background-color: rgba( 255, 255, 255, 0.2 );
+  padding: 30px;
+  border-radius:20px;
+}
+
+button {
+  color: white;
+  font-weight: 900;
+  background-color: rgba( 0, 0, 0, 0.1 );
+  padding: 10px ;
+  border-radius:5px;
+}
+.btn_chack {
+  margin-top: 20px;
+}
+
+form {
+  margin-top: 15px;
+}
+
+ul {
+  margin-top: 10px;
+  line-height:40px;
 }

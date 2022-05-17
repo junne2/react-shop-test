@@ -1,20 +1,24 @@
-import React from 'react'
-import Type from './Type'
+import React, { useContext } from 'react';
+import { OrderContext } from '../../contexts/OrderContext';
+import Type from './Type';
 
-function OrderPage() {
+function OrderPage({setStep}) {
+    const [orderDatas] = useContext(OrderContext);
+
   return (
     <div>
-        <h1>Travel Products</h1>
-        <div>
+        <h1>🧳 Travel Products </h1>
+        <div className='product'>
+            <p>가고 싶은 여행지의 수량을 입력해 주세요.</p>
             <Type orderType="products" />
         </div>
-        <div style={{display: "flax", marginTop: 20 }}>
+        <div className='option' style={{display: "flax", marginTop:30 }}>
             <div style={{width:"50%"}}>
                 <Type orderType= "options" />
             </div>
             <div>
-                <h2>Total Price:</h2>
-                <button>주문</button>
+                <h2>Total Price: {orderDatas.totals.total}</h2>
+                <button onClick={() => setStep(1)}>주문하기</button>
             </div>
         </div>
     </div>
