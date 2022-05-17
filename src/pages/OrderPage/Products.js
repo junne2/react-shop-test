@@ -31,4 +31,4 @@ function Products({name, imagePath, updateItemCount}) {
   )
 }
 
-export default Products
+export default Products;
